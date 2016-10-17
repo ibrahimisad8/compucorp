@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Compucorp | Task 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="http://fonts.googleapis.com/css?family=Kotta+One|Cantarell:400,700" rel="stylesheet" type="text/css">
+        <link href='./style/layout.css' rel='stylesheet' type='text/css' />
+        <script type='text/javascript' src='./script/angular.min.js'></script>
+        <script type='text/javascript' src='./script/ngGeolocation.js'></script>
+        <script type='text/javascript' src='./script/app.js'></script>
+    </head>
+    <body ng-app="myApp"  ng-controller="customersCtrl">
+    <div class="wallper">
+        <div id="top"> 
+            <b style="font-size:19px"><span style="color:#54adde;">{</span> CT <span style="color:green">}</span></b> <span>COMPUCORP | TASK 1</span>
+        </div>
+        <div id="middle" >
+            <div id="readLocation">
+                <h1 >SIMPLE WEATHER APP</h1>
+                <p>Do you want this app to read your location</p>
+                <p>
+                    <form>
+                        <input type="radio" ng-model="myVar" value="yes" ng-click="yesClick()" />YES  
+                        <input type="radio" ng-model="myVar" value="no" ng-click="noClick()"/>NO
+                    </form>
+                </p>
+            </div>
+            <div  ng-switch="myVar">
+                <div id="curLocation" ng-switch-when="yes" >
+                    <h1>CURRENT LOCATION</h1>
+                    <p>System will read your current location </p>
+                    <p><b>location :</b> <span id="spanb">{{geoDloc}}</span></p>
+                    <p><b>Weather Now :</b> <span id="spanb">{{geoWeather}}</span></p>
+                </div>
+                <div id="nomLocation" ng-switch-when="no" >
+                    <h1>ENTER LOCATION</h1>
+                    <p>Please enter your country or postcode</p>
+                    <p>
+                        <input type="text" name="loction" ng-model="field.location" />
+                        <button ng-click="change()">SEND</button>
+                    </p>
+                    <p><b>location :</b> {{curDloc}}</p>
+                    <p><b>Weather Now :</b><span id="spanb">{{curWeather}}</span></p>
+                </div>
+            </div>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+html, body, .wallper{
+  height: 100%;
+}
+body
+{
+    margin      : 0px;
+    padding     : 0px;
+    font-family : "Cantarell", sans-serif;
+    font-size   : 13px;
+    color       : #555;
+    background-image      : url(../images/home-two.jpeg);
+    background-position   : center center;
+    background-repeat     : no-repeat;
+    background-attachment : fixed;
+    background-size       : cover;
+    background-color      : #464646;
+}
+.wallper 
+{
+    margin   : 0px auto;
+    padding  : 0px;
+    overflow : hidden; 
+}
+.wallper #top
+{
+    padding          : 21px;
+    border-bottom    : 1px solid #DDD;
+    width            : 100%;
+    position         : fixed;
+    background-color : rgba(0, 0, 0, 0.6);
+    color            : #FFF;
+}
+.wallper #middle
+{
+    margin-top  : 80px;
+    padding     : 9px;
+    text-align  : center;
+}
+.wallper #middle h1 
+{
+
+}
+.wallper #middle #spanb
+{
+    text-transform : capitalize
+}
+.wallper #middle #readLocation h1
+{
+    font-size : 40px; 
+}
+.wallper #middle #curLocation
+{
+    
+}
+.wallper #middle #nomLocation input 
+{
+     padding       : 7px;
+     border-radius : 7px 0px 0px 7px; 
+     border        : 1px solid #BBB; 
+}
+.wallper #middle #nomLocation button 
+{
+    background      : #666;
+    text-decoration : none;
+    color           : #FFF;
+    font-size       : 11px;
+    padding         : 8px;
+    border-radius   : 3px;
+    text-transform  : uppercase;
+    border          : 1px solid #555;
+    border-radius   :  0px 7px 7px 0px; 
+}
