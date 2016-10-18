@@ -30,7 +30,7 @@ angular
             $scope.curDloc    = "";
             $scope.curWeather = "";
 
-            function getWeather(){
+            function getWeather(local){
                   $scope.curDloc    = "Loading ...";
                   $scope.curWeather = "Loading ...";
                   locUrl = "http://api.openweathermap.org/data/2.5/weather?q="+local+"&appid="+API;
@@ -46,7 +46,7 @@ angular
            };
 
            $scope.change   = function (){
-                      getWeather();
+                      getWeather($scope.field.location);
            };
      };
 })
